@@ -1,9 +1,5 @@
+/* eslint-disable */
 var log = function(level, args) {
-  if(['silly', 'input', 'verbose', 'prompt', 'debug', 'info', 'data', 'help', 'warn', 'error'].includes(level)){
-    if(args && args[0]){
-      console.log(args[0]);
-    }
-  }
   if(['silly', 'input', 'verbose', 'prompt', 'debug', 'info', 'data', 'help', 'warn', 'error'].includes(level)){
     Meteor.call("winston-client.log", level, args);
   } 
